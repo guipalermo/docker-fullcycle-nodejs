@@ -46,7 +46,7 @@ class App {
   async insertUser(name) {
     return new Promise((resolve, reject) => {
       const connection = mysql.createConnection(this.dbConfig);
-      const INSERT_USER_QUERY = `INSERT INTO user(name) values('${name}')`;
+      const INSERT_USER_QUERY = `INSERT INTO people(name) values('${name}')`;
 
       connection.query(INSERT_USER_QUERY, (error, _results, _fields) => {
         if (error) {
@@ -62,7 +62,7 @@ class App {
   async getAllUsers() {
     return new Promise((resolve, reject) => {
       const connection = mysql.createConnection(this.dbConfig);
-      const SELECT_QUERY = `SELECT id, name FROM user`;
+      const SELECT_QUERY = `SELECT id, name FROM people`;
 
       connection.query(SELECT_QUERY, (error, results) => {
         if (error) {
