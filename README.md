@@ -8,14 +8,7 @@ cp .env.example .env
 
 Com os dois arquivos .env criados. Faça as modificações de acesso ao Banco de Dados.
 
-
-2 - Dentro do diretório `/node`, Faça a instalação dos pacotes do node.js via npm.
-
-```    
-npm install
-```
-
-3 - Para executar o projeto e já realizar o build da aplicação, execute:
+2 - Para executar o projeto e já realizar o build da aplicação, execute:
 
 ```    
 docker-compose up -d
