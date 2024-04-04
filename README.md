@@ -14,6 +14,4 @@ Com os dois arquivos .env criados. Faça as modificações de acesso ao Banco de
 docker-compose up -d
 ```
 
-Obs: para que funcione corretamente, após o mysql estiver sendo executado, será preciso acessar o schema e criar a tabela `people`.
-
 Após seguir estes passos, a aplicação ficará disponível no endereço `http://localhost:8080/`.

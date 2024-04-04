@@ -15,6 +15,7 @@ class App {
     };
 
     this.setupRoutes();
+    this.createTable();
   }
 
   async start() {
@@ -34,6 +35,28 @@ class App {
         console.error(`Error: ${error}`);
         res.status(500).send('Error processing request');
       }
+    });
+  }
+
+  async createTable() {
+    return new Promise((resolve, reject) => {
+      const connection = mysql.createConnection(this.dbConfig);
+      const CREATE_TABLE_QUERY = `
+        CREATE TABLE IF NOT EXISTS people (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          name VARCHAR(255) NOT NULL
+        )
+      `;
+
+      connection.query(CREATE_TABLE_QUERY, (error, _results, _fields) => {
+        if (error) {
+          reject(error);
+          return;
+        }
+        console.log("Table 'people' created successfully");
+        connection.end();
+        resolve();
+      });
     });
   }
 
