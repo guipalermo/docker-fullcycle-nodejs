@@ -10,8 +10,8 @@ class App {
     this.dbConfig = {
       host: 'db',
       user: 'root',
-      password: process.env.DB_PASSWORD || '',
-      database: process.env.DB_DATABASE || '',
+      password: process.env.MYSQL_PASSWORD || '',
+      database: process.env.MYSQL_DATABASE || '',
     };
 
     this.setupRoutes();
