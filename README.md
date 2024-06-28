@@ -1,6 +1,6 @@
 # docker-fullcycle-nodejs
 
-1 - Copie os arquivos .env.example dos diretórios `/` e `/node` para os arquivos .env
+1 - Copie os arquivos .env.example da raiz para o arquivo .env
 
 ```    
 cp .env.example .env
